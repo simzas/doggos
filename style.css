@@ -53,6 +53,7 @@ header {
     align-items: center;
     min-height: calc(max(13vh, 100px));
     font-size: 1.5rem;
+    padding: 0.75em;
     background-color: var(--background-color-panels-dark);
 }
 
@@ -77,6 +78,8 @@ section {
 }
 
 header>* {
+    display: flex;
+    align-items: center;
     margin: 0em 5vw;
 }
 
@@ -106,6 +109,22 @@ button {
     cursor: pointer;
 }
 
+.tap-me {
+    padding-right: 0.5em;
+}
+
 /* .rotate {
     transform: rotateY(90deg);
 } */
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    .tap-me {
+        display: none;
+    }
+}
